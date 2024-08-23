@@ -23,12 +23,12 @@ def interseccion(*listas):
     return list(interseccion)
 
 # Ingresar el numero de conjuntos
-num_conjuntos = int(input("Ingresa el número de conjuntos (mínimo 2 y máximo 4): "))
+num_conjuntos = int(input("Ingresa el número de conjuntos (mínimo 3): "))
 
 # Validar que el número de conjuntos esté en el rango permitido
-while num_conjuntos < 2 or num_conjuntos > 4:
-    print("El número de conjuntos debe ser entre 2 y 4.")
-    num_conjuntos = int(input("Ingresa el número de conjuntos (mínimo 2 y máximo 4): "))
+while num_conjuntos < 3:
+    print("El número de conjuntos debe ser entre 3 o más.")
+    num_conjuntos = int(input("Ingresa el número de conjuntos (mínimo 3): "))
 
 
 # Almacenar las listas ingresadas
