@@ -1,4 +1,5 @@
 from Operaciones.operaciones import union, interseccion, diferencia, simetrica, subconjunto, subconjunto2, subconjunto3, superconjunto2, superconjunto, superconjunto3
+from Vista.grafica import graficar
 
 # Ingresar los conjuntos
 def ingresar_conjuntos():
@@ -27,42 +28,61 @@ conjuntoA, conjuntoB, conjuntoC = conjuntos
 def mostrar_union():
     resultado = union(conjuntoA, conjuntoB, conjuntoC)
     print("Resultado de la Unión:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - Unión")
 
 def mostrar_interseccion():
     resultado = interseccion(conjuntoA, conjuntoB, conjuntoC)
     print("Resultado de la Intersección:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - Intersección")
+
 
 def mostrar_diferencia():
     resultado = diferencia(conjuntoA, conjuntoB, conjuntoC)
     print("Resultado de la Diferencia:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - Diferencia")
+
 
 def mostrar_diferencia_simetrica():
     resultado = simetrica(conjuntoA, conjuntoB, conjuntoC)
     print("Resultado de la Diferencia Simétrica:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - Diferencia simétrica")
+
 
 def mostrar_subconjuntoA():
     resultado = subconjunto(conjuntoA)
     print("Subconjuntos de A:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - SubconjuntoA")
+
 
 def mostrar_subconjuntoB():
     resultado = subconjunto2(conjuntoB)
     print("Subconjuntos de B:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - SubconjuntoB")
+
 
 def mostrar_subconjuntoC():
     resultado = subconjunto3(conjuntoC)
     print("Subconjuntos de C:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - SubconjuntoB")
+
 
 def mostrar_superconjuntoA():
     resultado = superconjunto(conjuntoA, universal)
     print("Superconjuntos de A:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - SuperconjuntoA")
+
 
 def mostrar_superconjuntoB():
     resultado = superconjunto2(conjuntoB, universal)
     print("Superconjuntos de B:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - SuperconjuntoB")
+
 
 def mostrar_superconjuntoC():
     resultado = superconjunto3(conjuntoC, universal)
     print("Superconjuntos de C:", resultado)
+    graficar(conjuntoA, conjuntoB, conjuntoC, "Diagrama de Venn - SuperconjuntoC")
+
 
 def salir():
     print('Saliendo...')
